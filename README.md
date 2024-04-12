@@ -1,3 +1,7 @@
+#INSIGHTIFY- Your Ultimate News Companion
+Insightify is a web application designed to keep you informed and up-to-date with the latest news and trends from around the world. With Insightify, you can easily customize your news feed to focus on the topics that matter most to you, whether it's top headlines, science, health, business, sports, or entertainment.
+It is built with ReactJS.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

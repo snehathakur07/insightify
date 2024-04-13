@@ -34,9 +34,14 @@ export default class Navbar extends Component {
     const date = new Date();
     const currentDay = daysOfWeek[date.getDay()];
     const currentMonth = monthsOfYear[date.getMonth()];
-    const handleQuery=()=>{
-        console.log("SEARCHED")
-    }
+    const handleQuery = () => {
+      console.log("SEARCHED");
+    };
+    const toggleMenu = () => {
+      let menu=document.querySelector(".lower");
+        menu.classList.toggle('open');
+    };
+    
     return (
       <div>
         <div className="nav-bar">
@@ -47,36 +52,39 @@ export default class Navbar extends Component {
                 {currentDay} {date.getDate()} {currentMonth},{" "}
                 {date.getFullYear()}
               </p>
-             
             </div>
           </div>
           <hr />
           <div className="lower">
+            <div id="hamburger-icon" onClick={toggleMenu}>
+              <div className="bar1"></div>
+              <div className="bar2"></div>
+              <div className="bar3"></div>
+            </div>
             <ul>
               {/* <li>INDIA</li> */}
               <li>
-                <Link to="/india">INDIA</Link>
+                <Link to="/india" onClick={toggleMenu}>INDIA</Link>
               </li>
               <li>
-                <Link to="/science">SCIENCE</Link>
+                <Link to="/science" onClick={toggleMenu}>SCIENCE</Link>
               </li>
               <li>
-                <Link to="/health">HEALTH</Link>
+                <Link to="/health" onClick={toggleMenu}>HEALTH</Link>
               </li>
               <li>
-                <Link to="/business">BUSINESS</Link>
+                <Link to="/business" onClick={toggleMenu}>BUSINESS</Link>
               </li>
               <li>
-                <Link to="/food">FOOD</Link>
+                <Link to="/food" onClick={toggleMenu}>FOOD</Link>
               </li>
               <li>
-                <Link to="/entertainment">ENTERTAINMENT</Link>
+                <Link to="/entertainment" onClick={toggleMenu}>ENTERTAINMENT</Link>
               </li>
               <li>
-                <Link to="/sports">SPORTS</Link>
+                <Link to="/sports" onClick={toggleMenu}>SPORTS</Link>
               </li>
             </ul>
-            
           </div>
         </div>
       </div>

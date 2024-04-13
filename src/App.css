@@ -56,9 +56,11 @@
   font-size: 0.8rem;
   font-weight: 600;
 }
-.nav-bar ul li{
-  cursor:pointer;
+
+.nav-bar ul li {
+  cursor: pointer;
 }
+
 .nav-bar .searchBar {
   background-color: #e2e2e2;
   padding: 0.5rem;
@@ -79,12 +81,14 @@ input:focus {
   border: none;
   color: black
 }
-.spinner{
-  padding-top:3rem;
-  display:flex;
+
+.spinner {
+  padding-top: 3rem;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .container-landing {
   background: rgba(211, 216, 255, 0.235);
   box-shadow: -2px 0px 5px -2px black;
@@ -131,20 +135,23 @@ img {
   padding: 2rem 5rem;
   justify-content: flex-end;
 }
-.pages button{
-  padding:0.8rem 1.3rem;
-  border:none;
-  background:black;
-  color:white;
-  border-radius:10px;
-  display:flex;
+
+.pages button {
+  padding: 0.8rem 1.3rem;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap:5px;
+  gap: 5px;
 }
-.pages button span{
-  transform:scale(0.8)
+
+.pages button span {
+  transform: scale(0.8)
 }
+
 .footer {
   padding: 2rem;
   background: #e2e2e2;
@@ -152,6 +159,73 @@ img {
   text-align: center;
   font-weight: 600;
 }
-button{
+
+button {
   cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 20px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.644);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-2px, 5px);
+  transform: rotate(-45deg) translate(-2px, 5px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-4px, -6px);
+  transform: rotate(45deg) translate(-4px, -6px);
+}
+
+@media (max-width:900px) {
+  .nav-bar ul {
+    gap: 3rem;
+  }
+}
+
+@media (max-width:700px) {
+  .nav-bar ul {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width:550px) {
+  .lower{position:relative;}
+  .nav-bar ul {
+    gap: 1.5rem;
+    flex-direction: column;
+    transition: all 0.7s ease-in-out;
+    position:absolute;
+    background:white;
+    width:100vw;
+    top:1rem; 
+    left:-120%;
+  }
+  .open ul{
+    left:-1rem;
+  }
+  #hamburger-icon{
+    display:block ;
+  }
+  .container-landing{
+    margin-top:1rem;
+  }
+  #hamburger-icon{
+    margin-top:1rem;
+  }
 }
